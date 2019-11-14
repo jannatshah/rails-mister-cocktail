@@ -1,0 +1,22 @@
+<div class="container">
+  <br>
+  <h2>All our cocktails (<%= @cocktails.length %>)</h2>
+
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+        <div class="card">
+          <h3><%= cocktail.name %></h3>
+          <button type="button" class="btn btn-outline-primary" id="more-info">
+            <%= link_to 'More info', cocktail_path(cocktail) %>
+          </button>
+        </div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <button type="button" class="btn btn-outline-primary">
+    <%= link_to 'Add a cocktail', cocktails_new_path %>
+  </button>
+</div>
+
