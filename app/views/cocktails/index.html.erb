@@ -18,10 +18,11 @@ url('https://images.unsplash.com/photo-1552292511-75e06ec9a7bf?ixlib=rb-1.2.1&ix
     <% @cocktails.each do |cocktail| %>
       <% if cocktail.photo.attached? %>
         <div class="card" style="background-image:
+        linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
         url('<%= cl_image_path cocktail.photo.key %>'
         )">
-          <h3 style="color: red"><strong><%= cocktail.name %></strong></h3>
-          <button type="button" class="btn btn-outline-primary" id="more-info">
+          <h2 style="color: red"><strong><%= cocktail.name %></strong></h2>
+          <button type="button" class="btn btn-outline-danger" id="more-info">
             <%= link_to 'More info', cocktail_path(cocktail) %>
           </button>
         </div>
@@ -29,7 +30,7 @@ url('https://images.unsplash.com/photo-1552292511-75e06ec9a7bf?ixlib=rb-1.2.1&ix
       <% else %>
         <div class="card">
           <h3><%= cocktail.name %></h3>
-          <button type="button" class="btn btn-outline-primary" id="more-info">
+          <button type="button" class="btn btn-outline-danger" id="more-info">
             <%= link_to 'More info', cocktail_path(cocktail) %>
           </button>
         </div>
