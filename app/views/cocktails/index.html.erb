@@ -1,4 +1,6 @@
 <div class="container">
+  <%= cl_image_tag("z0tftffmpd9sfygk8ef4",
+      width: 200, height: 200, crop: :fill) %>
   <br>
   <h2>All our cocktails (<%= @cocktails.length %>)</h2>
 
@@ -19,4 +21,3 @@
     <%= link_to 'Add a cocktail', new_cocktail_path %>
   </button>
 </div>
-

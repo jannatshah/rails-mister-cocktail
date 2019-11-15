@@ -65,3 +65,6 @@ gem 'simple_form'
 
 # We don’t want to share those secret keys on Github, we can use the dotenv gem for security
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Gemfile for image hosting
+gem 'cloudinary', '~> 1.12.0'
