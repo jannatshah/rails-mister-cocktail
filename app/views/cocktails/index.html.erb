@@ -6,12 +6,26 @@
 
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
+      <% if cocktail.photo.attached? %>
+        <div class="card" style="background-image:
+        linear-gradient(
+        url('<%= cl_image_path cocktail.photo.key %>'
+        )">
+          <h3><%= cocktail.name %></h3>
+          <button type="button" class="btn btn-outline-primary" id="more-info">
+            <%= link_to 'More info', cocktail_path(cocktail) %>
+          </button>
+        </div>
+
+      <% else %>
         <div class="card">
           <h3><%= cocktail.name %></h3>
           <button type="button" class="btn btn-outline-primary" id="more-info">
             <%= link_to 'More info', cocktail_path(cocktail) %>
           </button>
         </div>
+      <% end %>
+
     <% end %>
   </div>
 
