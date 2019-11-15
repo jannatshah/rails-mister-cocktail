@@ -14,7 +14,17 @@
 
   <body>
     <%= yield %>
-
+    <div class="footer">
+      <div class="footer-links">
+        <a href="https://github.com/jannatshah"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/jannatshah"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/jannatshah/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://angel.co/jannatshah"><i class="fab fa-angellist"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This footer is made with <i class="fas fa-heart"></i> by Jannat Shah at Le Wagon
+      </div>
+    </div>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
