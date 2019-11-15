@@ -1,17 +1,33 @@
+<div class="jumbotron jumbotron-fluid" style="background-image: url('../../assets/images/banner-bar-unsplash.jpg')">
+  <div class="container" >
+    <h1 class="display-4">Mister Cocktail</h1>
+    <p class="lead">A modern, co-operative library of cocktails and their ingredients.</p>
+  </div>
+</div>
+
 <div class="container">
-  <%= cl_image_tag("z0tftffmpd9sfygk8ef4",
-      width: 200, height: 200, crop: :fill) %>
+  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system,
+  BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto,
+  &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+  href="https://unsplash.com/@peteriveyphotography?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+  target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Peter Ivey-Hansen">
+  <span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+    style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+    viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span>
+    <span style="display:inline-block;padding:2px 3px">Peter Ivey-Hansen</span></a>
+
   <br>
+  <br>
+
   <h2>All our cocktails (<%= @cocktails.length %>)</h2>
 
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <% if cocktail.photo.attached? %>
         <div class="card" style="background-image:
-        linear-gradient(
         url('<%= cl_image_path cocktail.photo.key %>'
         )">
-          <h3><%= cocktail.name %></h3>
+          <h3 style="color: red"><strong><%= cocktail.name %></strong></h3>
           <button type="button" class="btn btn-outline-primary" id="more-info">
             <%= link_to 'More info', cocktail_path(cocktail) %>
           </button>
@@ -31,7 +47,4 @@
 
   <br>
 
-  <button type="button" class="btn btn-outline-success">
-    <%= link_to 'Add a cocktail', new_cocktail_path %>
-  </button>
 </div>

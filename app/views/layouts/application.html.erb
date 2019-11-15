@@ -13,7 +13,21 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"
+        width="30" height="30" class="d-inline-block align-top" alt="">
+        Mister Cocktail 🎉
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/cocktails/new">Add a cocktail <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </nav>
+
     <%= yield %>
+
     <div class="footer">
       <div class="footer-links">
         <a href="https://github.com/jannatshah"><i class="fab fa-github"></i></a>
